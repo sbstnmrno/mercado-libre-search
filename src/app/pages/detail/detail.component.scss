@@ -1,0 +1,44 @@
+@import './../../../assets/styles/main.scss';
+
+main {
+    width: clamp(37.5rem, 60%, 75rem);
+    margin: auto;
+    .detail {
+        display: flex;
+        gap: $margin;
+        &__image {
+            width: $img-large;
+        }
+        &__content {
+            padding: $padding $padding 0 0;
+        }
+        &__feature {
+            color: $mono-80;
+            font-family: $metropolis-regular;
+            font-size: size(14);
+            margin-bottom: $margin;
+        }
+        &__title {
+            color: $mono-100;
+            font-family: $metropolis-bold;
+            font-size: size(24);
+        }
+        &__price {
+            color: $mono-100;
+            font-family: $metropolis-regular;
+            font-size: size(46);
+            margin: $padding 0;
+        }
+        &__cta {
+            border: none;
+            background-color: $blue;
+            color: $white;
+            font-family: $metropolis-regular;
+            font-size: size(16);
+            width: 100%;
+            padding: $margin 0;
+            border-radius: $radius;
+            cursor: pointer;
+        }
+    }
+}

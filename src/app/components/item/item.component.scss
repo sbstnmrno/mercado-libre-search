@@ -1,0 +1,45 @@
+@import './../../../assets/styles/main.scss';
+
+.item {
+    display: flex;
+    margin: $margin 0;
+    &__image {
+        width: $img-small;
+        height: $img-small;
+        margin: 0 $margin;
+    }
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: $padding;
+        width: 60%;
+    }
+    &__price {
+        font-size: size(24);
+        color: $mono-100;
+        margin-top: $margin;
+        &.free-shipping {
+            &::after {
+                content: '';
+                background: url('./../../../assets/icons/ic_shipping.png') no-repeat center transparent;
+                background-size: contain;
+                height: 1rem;
+                width: 1rem;
+                display: inline-block;
+                margin-left: size(8);
+            }
+        }
+    }
+    &__title {
+        color: $mono-100;
+        font-size: size(18);
+    }
+    &__location {
+        font-size: size(12);
+        color: $mono-60;
+        margin-top: $margin;
+    }
+    &__image, &__price, &__title {
+        cursor: pointer;
+    }
+}

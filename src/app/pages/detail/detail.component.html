@@ -1,0 +1,15 @@
+<main>
+    <section class="detail">
+        <img class="detail__image" [src]="detail.thumbnail" [alt]="detail.title">
+        <div class="detail__content">
+            <p class="detail__feature">{{detail.condition === 'new' ? 'Nuevo' : 'Usado'}} - {{detail.sold_quantity}} vendidos</p>
+            <h1 class="detail__title">{{detail.title}}</h1>
+            <p class="detail__price">{{detail.price | currency:'COP':'symbol-narrow':'4.0'}}</p>
+            <button class="detail__cta">Comprar</button>
+        </div>
+    </section>
+    <section class="description">
+        <h3 class="description__title">Descripción del producto</h3>
+        <p class="description__text">{{description.plain_text}}</p>
+    </section>
+</main>

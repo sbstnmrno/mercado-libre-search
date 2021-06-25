@@ -1,0 +1,6 @@
+@import '../utils/mixins.scss';
+
+@include fontface('Metropolis-Regular', 'Metropolis');
+@include fontface('Metropolis-Light', 'Metropolis');
+@include fontface('Metropolis-Medium', 'Metropolis');
+@include fontface('Metropolis-Bold', 'Metropolis');

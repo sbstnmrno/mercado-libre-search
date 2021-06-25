@@ -1,0 +1,9 @@
+<header>
+    <nav class="nav">
+        <a class="nav__logo" routerLink="/"></a>
+        <form class="nav__search" (submit)="onSearch()">
+            <input [(ngModel)]="search" placeholder="Nunca dejes de buscar" type="search" class="nav__input" name="search">
+            <input type="submit" class="nav__submit"  value="">
+        </form>
+    </nav>
+</header>
