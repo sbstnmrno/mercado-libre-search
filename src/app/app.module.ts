@@ -10,6 +10,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { SearchPageComponent } from './pages/search-page/search-page.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ItemComponent } from './components/item/item.component';
+import { BreadcrumbComponent } from './components/breadcrumb/breadcrumb.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ItemComponent } from './components/item/item.component';
     DetailComponent,
     HeaderComponent,
     SearchPageComponent,
-    ItemComponent
+    ItemComponent,
+    BreadcrumbComponent
   ],
   imports: [
     BrowserModule,

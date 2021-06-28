@@ -4,7 +4,7 @@ header {
     background-color: $yellow;
     padding: size(8) 0;
     .nav {
-        width: clamp(37.5rem, 60%, 75rem);
+        width: clamp(37.5rem, 70%, 75rem);
         margin: auto;
         display: flex;
         gap: size(8);

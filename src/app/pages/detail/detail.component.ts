@@ -10,10 +10,7 @@ import { ProductsService } from 'src/app/shared/services/products/products.servi
 })
 export class DetailComponent implements OnInit {
 
-  public detail: any;
-  public description: any;
-
-  public data!: ItemDetailModel
+  public data: ItemDetailModel
 
   constructor(
     private route: ActivatedRoute,

@@ -1,3 +1,4 @@
 <main>
+    <app-breadcrumb [breadcrumb]="data?.categories"></app-breadcrumb>
     <app-item *ngFor="let item of data?.items; let i = index" [item]="item"></app-item>
 </main>

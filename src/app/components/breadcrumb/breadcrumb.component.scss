@@ -1,0 +1,27 @@
+@import './../../../assets/styles/main.scss';
+
+.breadcrumb {
+    margin: $margin 0;
+    display: flex;
+    
+    span {
+        display: flex;
+        align-items: center;
+        font-size: size(14);
+        color: $mono-60;
+        &::after {
+            content: '';
+            background: url('../../../assets/icons/chevron.svg') center no-repeat;
+            background-size: contain;
+            height: .8rem;
+            width: .8rem;
+            margin: 0 $margin;
+        }
+        &:last-child {
+            font-family: $metropolis-bold;
+            &::after {
+                background: none;
+            }
+        }
+    }
+}

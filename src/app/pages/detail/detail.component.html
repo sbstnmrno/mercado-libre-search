@@ -1,6 +1,7 @@
 <main>
+    <app-breadcrumb [breadcrumb]="data?.categories"></app-breadcrumb>
     <section class="detail">
-        <img class="detail__image" [src]="data?.item?.picture" [alt]="data?.item?.title">
+        <img class="detail__image" [width]='680' [height]='680' [src]="data?.item?.picture" [alt]="data?.item?.title">
         <div class="detail__content">
             <p class="detail__feature">{{data?.item?.condition === 'new' ? 'Nuevo' : 'Usado'}} - {{data?.item?.sold_quantity}} vendidos</p>
             <h1 class="detail__title">{{data?.item?.title}}</h1>
@@ -9,7 +10,7 @@
         </div>
     </section>
     <section class="description">
-        <h3 class="description__title">Descripción del producto</h3>
+        <h2 class="description__title">Descripción del producto</h2>
         <p class="description__text">{{data?.item?.description}}</p>
     </section>
 </main>

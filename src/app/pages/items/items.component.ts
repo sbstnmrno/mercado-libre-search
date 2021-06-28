@@ -10,8 +10,7 @@ import { ProductsService } from 'src/app/shared/services/products/products.servi
 })
 export class ItemsComponent implements OnInit {
 
-  public result: any;
-  public data!: SearchResponseModel;
+  public data: SearchResponseModel;
 
   constructor(
     private productService: ProductsService,

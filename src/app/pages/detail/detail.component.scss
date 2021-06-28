@@ -1,16 +1,18 @@
 @import './../../../assets/styles/main.scss';
 
 main {
-    width: clamp(37.5rem, 60%, 75rem);
+    width: clamp(37.5rem, 70%, 75rem);
     margin: auto;
     .detail {
         display: flex;
-        gap: $margin;
+        justify-content: space-between;
         &__image {
-            width: $img-large;
+            max-width: $img-large;
+            width: 70%;
         }
         &__content {
             padding: $padding $padding 0 0;
+            width: 30%;
         }
         &__feature {
             color: $mono-80;
@@ -39,6 +41,14 @@ main {
             padding: $margin 0;
             border-radius: $radius;
             cursor: pointer;
+        }
+    }
+    .description {
+        width: 70%;
+        max-width: $img-large;
+        &__title {
+            font-size: size(28);
+            color: $mono-80;
         }
     }
 }
