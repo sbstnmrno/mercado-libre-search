@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  baseUrl: 'https://api.mercadolibre.com/'
+  baseUrl: 'https://api.mercadolibre.com/',
+  serverUrl: 'http://localhost:9090/',
 };
 
 /*

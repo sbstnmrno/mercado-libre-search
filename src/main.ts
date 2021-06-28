@@ -12,8 +12,13 @@ export function getBaseUrl(): string {
   return environment.baseUrl
 }
 
+export function getServerUrl(): string {
+  return environment.serverUrl
+}
+
 const providers = [
-  { provide: 'BASE_URL', useFactory: getBaseUrl, deps: [] }
+  { provide: 'BASE_URL', useFactory: getBaseUrl, deps: [] },
+  { provide: 'SERVER_URL', useFactory: getServerUrl, deps: [] }
 ]
 
 platformBrowserDynamic(providers).bootstrapModule(AppModule)

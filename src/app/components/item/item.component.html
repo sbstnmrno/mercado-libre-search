@@ -3,19 +3,19 @@
         width="180px" 
         height="180px" 
         class="item__image" 
-        [src]="item.thumbnail" 
+        [src]="item.picture" 
         [alt]="item.title" 
         [title]="item.title" 
         [routerLink]="'/items/'+item.id">
     <div class="item__content">
-        <p class="item__price" [title]="item.title" [routerLink]="'/items/'+item.id" [ngClass]="{'free-shipping':item.shipping.free_shipping}">
-            {{item.price | currency:'COP':'symbol-narrow':'4.0'}}
+        <p class="item__price" [title]="item.title" [routerLink]="'/items/'+item.id" [ngClass]="{'free-shipping':item.free_shipping}">
+            {{item.price.amount | currency:'COP':'symbol-narrow':'4.0'}}
         </p>
         <h2 class="item__title" [routerLink]="'/items/'+item.id" [title]="item.title">
             {{item.title}}
         </h2>
     </div>
     <p class="item__location">
-        {{item.seller_address.state.name}}
+        {{item.location}}
     </p>
 </article>

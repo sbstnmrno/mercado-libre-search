@@ -13,17 +13,15 @@ export class ProductsService {
     private httpClient: HttpClient,
     private urlService: UrlService
   ) { }
-
-  public getResults(search: string): Observable<any> {
-    return this.httpClient.get(this.urlService.URLS.getResultsByQuery(), {params: {
+  
+  public getSearch(search: string): Observable<any> {
+    return this.httpClient.get(this.urlService.URLS.getSearch(), {params: {
       'q': search,
       'limit': 4
     }});
   }
-  public getProduct(id: string): Observable<any> {
-    return this.httpClient.get(this.urlService.URLS.getProductById(id));
-  }
-  public getProductDescription(id: string): Observable<any> {
-    return this.httpClient.get(this.urlService.URLS.getProductDescriptionById(id));
+
+  public getItem(id: string): Observable<any> {
+    return this.httpClient.get(this.urlService.URLS.getItem(id));
   }
 }

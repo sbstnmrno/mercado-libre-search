@@ -6,17 +6,16 @@ import { UrlModel } from '../../models/url.model';
 })
 export class UrlService {
 
-  private BASE_URL: string;
+  private SERVER_URL: string;
 
   public URLS: UrlModel = {
-    getResultsByQuery: (): string => `${this.BASE_URL}sites/MCO/search`,
-    getProductById: (id: string): string => `${this.BASE_URL}items/${id}`,
-    getProductDescriptionById: (id: string): string => `${this.BASE_URL}items/${id}/description`
+    getSearch: (): string => `${this.SERVER_URL}api/items`,
+    getItem: (id): string => `${this.SERVER_URL}api/items/${id}`
   }
 
   constructor(
-    @Inject('BASE_URL') baseUrl: string
+    @Inject('SERVER_URL') serverUrl: string
   ) { 
-    this.BASE_URL = baseUrl;
+    this.SERVER_URL = serverUrl;
   }
 }

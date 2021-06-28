@@ -1,15 +1,15 @@
 <main>
     <section class="detail">
-        <img class="detail__image" [src]="detail.thumbnail" [alt]="detail.title">
+        <img class="detail__image" [src]="data?.item?.picture" [alt]="data?.item?.title">
         <div class="detail__content">
-            <p class="detail__feature">{{detail.condition === 'new' ? 'Nuevo' : 'Usado'}} - {{detail.sold_quantity}} vendidos</p>
-            <h1 class="detail__title">{{detail.title}}</h1>
-            <p class="detail__price">{{detail.price | currency:'COP':'symbol-narrow':'4.0'}}</p>
+            <p class="detail__feature">{{data?.item?.condition === 'new' ? 'Nuevo' : 'Usado'}} - {{data?.item?.sold_quantity}} vendidos</p>
+            <h1 class="detail__title">{{data?.item?.title}}</h1>
+            <p class="detail__price">{{data?.item?.price?.amount | currency:'COP':'symbol-narrow':'4.0'}}</p>
             <button class="detail__cta">Comprar</button>
         </div>
     </section>
     <section class="description">
         <h3 class="description__title">Descripción del producto</h3>
-        <p class="description__text">{{description.plain_text}}</p>
+        <p class="description__text">{{data?.item?.description}}</p>
     </section>
 </main>
